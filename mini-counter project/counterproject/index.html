@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter </title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 200px;
+            background-color: aqua;
+           
+        }
+        .first{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            padding: 20px;
+            gap: 10px;
+        }
+        .
+        p{
+            font-size: larger;
+        }
+
+        #butt{
+            position: relative;
+            top: 50px;
+            right: 150px;
+            /* margin: 10px; */
+            padding: 5px;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>Increment and Decrement </h1>
+   
+        <div class="first"> 
+         <br>
+         <button onclick="Decrement()"> Decrement by 1</button>
+         <p id="para">0</p>
+         <button onclick="Increment()" >Increment by 1</button>
+         <button id="butt" onclick="Reset()">Reset</button>
+      
+        </div>
+        
+    </div>
+    
+    <script>
+        let countvalue = document.querySelector("#para");
+      function Decrement() {
+        // get the value
+        let val = parseInt(countvalue.innerText );
+        // update the value
+        val = val - 1;
+        // set the value
+         countvalue.innerText = val;
+
+       }
+       function Increment(){
+        let val = parseInt(countvalue.innerText);
+        val  = val + 1;
+        countvalue.innerText = val ;
+       }
+       function Reset(){
+        countvalue.innerText="0"
+
+       }
+    </script>
+    
+</body>
+</html>
